@@ -48,7 +48,7 @@ img.linked-hoch-1 {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
-@media only screen and (max-width: 844px) {
+@media only screen and (max-width: 1170px) {
   img.linked-hoch-1 {
      height: 90vh;
   }
@@ -68,7 +68,7 @@ img.linked-hoch-2 {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
-@media only screen and (max-width: 844px) {
+@media only screen and (max-width: 1170px) {
   img.linked-hoch-2 {
      height: 90vh;
   }
