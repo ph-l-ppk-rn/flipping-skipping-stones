@@ -11,15 +11,139 @@ body {
     font-family: monospace;
     background-image: url("SHRINE-ORIGINAL-BLUR.jpg");
     z-index: -6;
-    cursor: url("CURSOR-07.png"), auto;
+/*    cursor: url("CURSOR-CIRCLE.png"), auto;*/
 }
 
+a:link {
+  color: #00e32d;
+}
 
+/* visited link */
+a:visited {
+  color: #00e32d;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: #00e32d;}
 
 img {
     object-fit: fill;
     z-index: -1;
     mix-blend-mode: normal;
+}
+
+
+
+img.linked-hoch-1 {
+    height: 95vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+img.linked-hoch-1:hover {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+img.linked-hoch-2 {
+    height: 95vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+img.linked-quer-1 {
+    width: 75vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img.linked-quer-1:hover {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+img.linked-quer-2 {
+    width: 75vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+video.linked-hoch {
+    height: 95vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+video.linked-quer {
+    width: 95vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stones-left {
+    position: absolute;
+    float: left; 
+    top: 15vw; 
+    left: 2vw; 
+/*    border: 2px solid black;*/
+}
+
+.stones-right {
+    position: absolute;
+    float: right; 
+    top: 15vw; 
+    right: 2vw; 
+/*    border: 2px solid black;*/
+}
+
+.stones-bottom {
+    position: fixed;
+    float: right; 
+    bottom: 2vw; 
+    right: 50%;
+    transform: translateX(50%);
+/*    border: 2px solid black;*/
+    width: 95vw;
+    text-align: center;
+}
+
+.single {
+    width: 3vw; 
+    min-width: 30px; 
+    opacity: 0.5;
+/*    padding:  2px; */
+}
+
+.single:hover {
+    opacity: 1;
+/*    border: 2px solid #00e32d;*/
+    width: 5vw;
+}
+/*
+    display: flex;
+    justify-content: center;
+*/
+    
 }
 
 area {
@@ -28,9 +152,10 @@ area {
 }
 
 .poem {
-    border: 2px solid pink;
+/*    border: 2px solid pink;*/
     color: #00e32d;
     position: fixed;
+    font-size: 4vw;
     
 }
 
@@ -46,9 +171,17 @@ area {
     height: 80vh;
     z-index: 0;
     mix-blend-mode: exclusion;
-     cursor: url("CURSOR-07.png"), auto;
+/*     cursor: url("CURSOR-08.png"), auto;*/
 /*    border-radius: 50px;*/
 }
+
+@media screen and (max-width: 844px) {
+  .container {
+     height: 85vh;
+       margin-top: 8vw;
+  }
+}
+
 
 .container2 {
     position: fixed;
@@ -67,6 +200,14 @@ area {
     mix-blend-mode: normal;
     
 }
+
+@media screen and (max-width: 844px) {
+  .container2 {
+     height: 85vh;
+    margin-top: 8vw;
+  }
+}
+
 
 #STONES-OVERLAY {
     position: absolute;
@@ -98,16 +239,33 @@ area {
 */
 
 #COORDINATES {
-    background-color: white;
-    border: 2px solid black;
-    padding: 20px;
-    margin-left: 40px;
+/*    background-color: white;*/
+/*    border: 2px solid black;*/
+    padding-top: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-left: 1vw;
     float: right;
     z-index: 1;
     position: fixed;
     top: 60px;
-    width: 253px;
+    width: 40vw;
+    max-width: 350px;
+    font-size: 2vw;
+    color: #00e32d;
     
+}
+
+@media screen and (min-width: 1200px) {
+  #COORDINATES {
+     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  #COORDINATES {
+     font-size: 15px;
+  }
 }
 
 #LEGENDE-Container {
@@ -117,7 +275,7 @@ area {
 .LEGENDE
 {
     background-color: white;
-    border: 2px solid black;
+/*    border: 2px solid black;*/
     padding-left: 10px;
     margin-left: 40px;
     margin-top: 10px;
@@ -129,8 +287,9 @@ area {
 }
 
 .NAV {
-    background-color: white;
+/*    background-color: white;*/
     border: 0px solid black;
+    border-radius: 10vw;
 /*    padding: 20px;*/
     margin-left: 0px;
     margin-top: 10px;
@@ -138,8 +297,12 @@ area {
     z-index: -10;
     position: relative;
 /*    top: 485px;*/
-    width: 250px;
+    width: 30vw;
+     max-width: 350px;
+    min-width: 200px;
 }
+
+
 
 .NAV img.Sirv.image-hover {
     position: absolute;
@@ -172,17 +335,52 @@ area {
 */
 
 #desc {
-    position: fixed;
-    border: 2px solid black;
-    left: 30vw;
-    top: 2vw;
-    width: 40vw;
-    font-size: 30px;
-    background-color: white;
+    position: relative;
+/*    border: 2px solid #00e32d;*/
+/*    left: 2vw;*/
+top: 0.5vw;
+    width: auto;
+    font-size: 4vw;
+    background-color: ;
     z-index: 110;
-    min-width: 300px;
-    padding: 20px;
+    color: #00e32d;
+/*    padding: 1vw;*/
+    float: left;
 }
+
+
+
+/*
+#COORDINATES {
+
+    border: 2px solid black;
+    padding-top: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-left: 1vw;
+    float: right;
+    
+    
+    top: 60px;
+    width: 40vw;
+    max-width: 350px;
+    font-size: 2vw;
+    color: #00e32d;
+    
+}
+
+@media screen and (min-width: 1200px) {
+  #COORDINATES {
+     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  #COORDINATES {
+     font-size: 15px;
+  }
+}
+*/
 
 
 /* width */

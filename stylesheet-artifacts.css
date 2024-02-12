@@ -1,0 +1,10 @@
+body {
+    font-family: monospace;
+    background-image: url("SHRINE-ORIGINAL-BLUR.jpg");
+    z-index: -6;
+    cursor: url("CURSOR-07.png"), auto;
+}
+
+.images {
+    width: 200px;
+}
